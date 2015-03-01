@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :microposts, only: [:create, :destroy]
   #リスト8.2をみて、下記をコメントアウト(2015.02.22)
   #get "users/new"
   root  'static_pages#home'
